@@ -2,10 +2,12 @@ import express from 'express'
 import logger from 'morgan'
 import path from 'path'
 import bodyParser from 'body-parser'
+import compression from 'compression'
 // import routes from './routes'
 
 const app = express()
 app.disable('x-powered-by')
+app.use(compression())
 
 // View engine setup
 app.set('views', path.join(__dirname, '../views'))
