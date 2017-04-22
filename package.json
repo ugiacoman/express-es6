@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "prestart": "yarn build",
-    "start": "node dist/index.js",
+    "start": "node dist/index.js -P $PORT",
     "dev": "nodemon src/index.js --exec \"node -r babel-register\"",
     "sweep": "rimraf dist",
     "build": "yarn sweep clean && mkdir -p dist && babel src -s -D -d dist"
