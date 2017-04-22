@@ -1,0 +1,9 @@
+{
+  "name": "express-es6",
+  "version": "1.0.0",
+  "description": "Express + ES6 + Standard Linting + Istanbul + Debug + Nodemon + Jest + PostgraphQL",
+  "main": "index.js",
+  "repository": "git@github.com:ugiacoman/express-es6.git",
+  "author": "Ulises Giacoman",
+  "license": "MIT"
+}
