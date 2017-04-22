@@ -3,6 +3,7 @@ import logger from 'morgan'
 import path from 'path'
 import bodyParser from 'body-parser'
 import compression from 'compression'
+const debug = require('debug')('dev')
 // import routes from './routes'
 
 const app = express()
@@ -39,4 +40,4 @@ app.use((err, req, res, next) => { // eslint-disable-line no-unused-vars
 })
 
 const { PORT = 8080 } = process.env
-app.listen(PORT, () => console.log(`Listening on port ${PORT}`)) // eslint-disable-line no-console
+app.listen(PORT, () => debug(`Listening on port ${PORT}`))
