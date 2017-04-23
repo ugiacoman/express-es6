@@ -3,14 +3,13 @@ import logger from 'morgan'
 import path from 'path'
 import bodyParser from 'body-parser'
 import compression from 'compression'
+import apiRoutes from '../routes/api'
+
 const debug = require('debug')('dev')
-// import routes from './routes'
 
 const app = express()
 app.disable('x-powered-by')
 app.use(compression())
-
-// View engine setup
 app.set('views', path.join(__dirname, '../views'))
 app.set('view engine', 'pug')
 
@@ -19,10 +18,12 @@ app.use(logger('dev', {
 }))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
-// app.use(express.static(path.join(__dirname, '../public')))
 
-// Routes
-// app.use('/', routes)
+app.use('/api/', apiRoutes)
+
+app.get('/', (req, res, next) => {
+  res.render('index', { title: 'Alertness Pro Server' })
+})
 
 app.use((req, res, next) => {
   const err = new Error('Not Found')
@@ -30,7 +31,6 @@ app.use((req, res, next) => {
   next(err)
 })
 
-// Error handler
 app.use((err, req, res, next) => { // eslint-disable-line no-unused-vars
   res
     .status(err.status || 500)
