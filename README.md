@@ -1,2 +1,4 @@
 # express-es6
-Express + ES6 + Standard Linting + Istanbul + Debug +  Nodemon + Jest + PostgraphQL 
+Express + ES6 + Standard Linting + Jest + Debug +  Nodemon
+
+Happy API :)
