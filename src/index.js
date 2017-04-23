@@ -3,7 +3,7 @@ import logger from 'morgan'
 import path from 'path'
 import bodyParser from 'body-parser'
 import compression from 'compression'
-import apiRoutes from '../routes/api'
+import apiRoutes from './routes/api'
 
 const debug = require('debug')('dev')
 

@@ -40,5 +40,8 @@
         }
       ]
     ]
+  },
+  "standard": {
+    "globals": [ "test", "expect" ]
   }
 }

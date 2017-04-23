@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/lib/sum.js"],"names":["Sum","x","y"],"mappings":";;;;;kBAKwBA,G;AALxB;;;;;AAKe,SAASA,GAAT,CAAcC,CAAd,EAAiBC,CAAjB,EAAoB;AACjC,SAAOD,IAAIC,CAAX;AACD","file":"sum.js","sourcesContent":["/*\n * sum.js\n * Example method for testing and coverage purposes\n*/\n\nexport default function Sum (x, y) {\n  return x + y\n}\n"]}
